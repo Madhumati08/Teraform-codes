@@ -1,13 +1,16 @@
-# Fetch the latest matching AMI for Red Hat Enterprise Linux 8 w/ SQL Server 2022 Standard Edition
-# Uses variables so the values can be overridden without editing this file.
+# data "aws_ami" "rhel_sql" {
+#   most_recent = true
+#   # Official Red Hat Owner ID
+#   owners      = ["309956199498"] 
 
-data "aws_ami" "rhel_sql" {
-  most_recent = true
+#   filter {
+#     name   = "name"
+#     # Use wildcards to catch updates (e.g., RHEL-8.x)
+#     values = ["RHEL-8*SQL_Server-2022_Standard*"] 
+#   }
 
-  filter {
-    name   = "name"
-    values = [var.ami_name]
-  }
-
-  owners = [var.ami_owner]
-}
+#   filter {
+#     name   = "virtualization-type"
+#     values = ["hvm"]
+#   }
+# }

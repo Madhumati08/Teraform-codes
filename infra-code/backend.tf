@@ -5,6 +5,6 @@ bucket         = "terraform-state-bucket-511168654082"
 key            = "ec2/terraform.tfstate"
 region         = "us-east-1"
 encrypt        = true
-dynamodb_table = "terraform-state-lock-db"
+# dynamodb_table = "terraform-state-lock-db/"
 }
 }

@@ -1,3 +1,3 @@
-output "instance_id" {
-  value = ec2_instance.example.id
-}
+# output "instance_id" {
+#   value = ec2_instance.example.id
+# }
